@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2e9">
+  <title>Oversized Tie-Print Shirt | LOOKSTLYO FASHION</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f1f0eb;
+      --ink: #191b19;
+      --muted: #686b66;
+      --line: #d0d1ca;
+      --orange: #d94d32;
+      --orange-dark: #ae3925;
+      --green: #c8dc42;
+      --white: #fff;
+      --yellow: #e3ed91;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: "Avenir Next", "Century Gothic", sans-serif;
+    }
+
+    button, input { font: inherit; }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 70px;
+      padding: 0 max(6vw, calc((100vw - 1160px) / 2));
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .brand {
+      font-family: Georgia, serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .top-note {
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    main { max-width: 1220px; margin: 0 auto; padding: 46px 30px 80px; }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 30px;
+      padding-bottom: 30px;
+    }
+
+    .eyebrow {
+      margin: 0 0 11px;
+      color: var(--orange-dark);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 68px;
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: .92;
+      text-transform: uppercase;
+    }
+
+    .intro-copy {
+      max-width: 340px;
+      margin: 0 0 3px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .product-overview {
+      display: grid;
+      grid-template-columns: minmax(200px, .7fr) 1.3fr;
+      gap: 28px;
+      margin: 4px 0 38px;
+      padding: 23px 0;
+      border-top: 2px solid var(--ink);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .price-box { align-self: center; }
+    .status-badge { color: var(--orange-dark); font-size: 10px; font-weight: 800; letter-spacing: 0; }
+    .unit-price { margin: 6px 0 0; font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; font-size: 42px; line-height: 1; }
+    .unit-price small { font-family: "Avenir Next", "Century Gothic", sans-serif; color: var(--muted); font-size: 12px; }
+    .delivery-price, .minimum-note { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
+
+    .product-specs {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px 22px;
+      align-content: center;
+    }
+
+    .product-spec { display: grid; gap: 5px; padding-left: 12px; border-left: 2px solid var(--green); }
+    .product-spec span { color: var(--muted); font-size: 10px; font-weight: 800; letter-spacing: 0; }
+    .product-spec strong { font-size: 13px; line-height: 1.4; }
+
+    .section-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin: 0 0 17px;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .selection-count { color: var(--muted); font-size: 11px; font-weight: 700; text-transform: uppercase; }
+
+    .prints {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 15px;
+    }
+
+    .print-option { position: relative; min-width: 0; }
+    .print-option input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+
+    .print-card {
+      display: block;
+      overflow: hidden;
+      border: 2px solid transparent;
+      border-radius: 2px;
+      background: var(--white);
+      cursor: pointer;
+      transition: border-color .18s ease, transform .18s ease;
+    }
+
+    .print-card:hover { transform: translateY(-3px); }
+    .print-option input:checked + .print-card { border-color: var(--orange); }
+    .print-option input:focus-visible + .print-card { outline: 3px solid var(--ink); outline-offset: 3px; }
+
+    .print-image {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      background: #e7e6dc;
+    }
+
+    .print-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 5px;
+      padding: 10px 11px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .checkmark { color: var(--orange); opacity: 0; font-size: 16px; }
+    .print-option input:checked + .print-card .checkmark { opacity: 1; }
+
+    .order-form {
+      display: none;
+      margin-top: 34px;
+      padding-top: 27px;
+      border-top: 2px solid var(--ink);
+      animation: arrive .28s ease both;
+    }
+
+    .order-form.is-visible { display: block; }
+    @keyframes arrive { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+    .form-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 22px;
+    }
+
+    .form-heading p { margin: 7px 0 0; color: var(--muted); font-size: 13px; }
+
+    .courier-options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      max-width: 650px;
+      margin: 0 0 25px;
+      padding: 0;
+      border: 0;
+    }
+
+    .courier-options legend, .address-title {
+      margin-bottom: 11px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .courier-option { position: relative; }
+    .courier-option input { position: absolute; opacity: 0; }
+
+    .courier-card {
+      display: flex;
+      min-height: 62px;
+      align-items: center;
+      gap: 11px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      background: var(--white);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .courier-card::before {
+      width: 16px;
+      height: 16px;
+      flex: 0 0 16px;
+      border: 1.5px solid #87968d;
+      border-radius: 50%;
+      content: "";
+    }
+
+    .courier-option input:checked + .courier-card { border-color: var(--ink); background: #e9edce; }
+    .courier-option input:checked + .courier-card::before { border: 5px solid var(--ink); }
+    .courier-option input:focus-visible + .courier-card { outline: 3px solid var(--orange); outline-offset: 2px; }
+
+    .purchase-options {
+      display: grid;
+      grid-template-columns: 1fr minmax(170px, .45fr);
+      align-items: end;
+      gap: 16px;
+      max-width: 650px;
+      margin-bottom: 24px;
+    }
+
+    .size-options { min-width: 0; margin: 0; padding: 0; border: 0; }
+    .size-options legend { margin-bottom: 10px; font-size: 13px; font-weight: 800; }
+    .size-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+    .size-option { position: relative; }
+    .size-option input { position: absolute; opacity: 0; }
+    .size-card {
+      display: grid;
+      min-height: 43px;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      background: var(--white);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .size-option input:checked + .size-card { border-color: var(--ink); background: var(--green); }
+    .size-option input:focus-visible + .size-card { outline: 3px solid var(--orange); outline-offset: 2px; }
+
+    .quantity-field { display: grid; gap: 6px; }
+    .quantity-field label { font-size: 12px; font-weight: 700; }
+    .quantity-field input {
+      width: 100%;
+      min-height: 43px;
+      padding: 9px 11px;
+      border: 1px solid #cbd2c9;
+      border-radius: 3px;
+      outline: none;
+      background: var(--white);
+      color: var(--ink);
+      font-size: 13px;
+    }
+    .quantity-field input:focus { border-color: var(--green); box-shadow: 0 0 0 3px #255d4b1c; }
+
+    .order-estimate { max-width: 650px; margin: -11px 0 23px; color: var(--ink); font-size: 13px; font-weight: 800; }
+
+    .address-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px 16px;
+      max-width: 900px;
+    }
+
+    .field { display: grid; gap: 6px; }
+    .field label { font-size: 12px; font-weight: 700; }
+
+    .field input {
+      width: 100%;
+      min-height: 43px;
+      padding: 10px 11px;
+      border: 1px solid #cbd2c9;
+      border-radius: 3px;
+      outline: none;
+      background: var(--white);
+      color: var(--ink);
+      font-size: 13px;
+    }
+
+    .field input::placeholder { color: #929d95; }
+    .field input:focus { border-color: var(--green); box-shadow: 0 0 0 3px #255d4b1c; }
+
+    .submit-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 23px;
+    }
+
+    .submit-button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 20px;
+      border: 0;
+      border-radius: 3px;
+      background: var(--ink);
+      color: var(--green);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 800;
+      transition: background .18s ease, transform .18s ease;
+    }
+
+    .submit-button:hover { transform: translateY(-1px); background: var(--orange-dark); color: white; }
+    .submit-button:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+    .submit-note { color: var(--muted); font-size: 11px; }
+
+    .whatsapp-contact {
+      position: fixed;
+      right: 22px;
+      bottom: max(20px, env(safe-area-inset-bottom));
+      z-index: 5;
+      display: inline-flex;
+      min-width: 230px;
+      min-height: 58px;
+      align-items: center;
+      gap: 12px;
+      padding: 9px 16px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: var(--white);
+      box-shadow: 0 4px 14px #191b191a;
+      color: var(--ink);
+      text-decoration: none;
+      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+    }
+
+    .whatsapp-contact:hover { transform: translateY(-2px); border-color: #25d366; box-shadow: 0 7px 18px #191b1926; }
+    .whatsapp-contact:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+    .whatsapp-icon { width: 36px; height: 36px; flex: 0 0 36px; padding: 5px; border-radius: 50%; background: #25d366; color: white; }
+    .whatsapp-label { display: grid; gap: 2px; }
+    .whatsapp-label strong { font-size: 12px; line-height: 1.1; }
+    .whatsapp-label span { font-size: 13px; font-weight: 800; line-height: 1.1; }
+
+    .instagram-contact {
+      position: fixed;
+      right: 22px;
+      bottom: 92px;
+      z-index: 5;
+      display: inline-flex;
+      min-width: 230px;
+      min-height: 58px;
+      align-items: center;
+      gap: 12px;
+      padding: 9px 16px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: var(--white);
+      box-shadow: 0 4px 14px #191b191a;
+      color: var(--ink);
+      text-decoration: none;
+      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+    }
+
+    .instagram-contact:hover { transform: translateY(-2px); border-color: #c13584; box-shadow: 0 7px 18px #191b1926; }
+    .instagram-contact:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+    .instagram-icon { width: 36px; height: 36px; flex: 0 0 36px; padding: 6px; border-radius: 50%; background: linear-gradient(145deg, #f7a43b, #d84270 52%, #753bb5); color: white; }
+    .instagram-label { display: grid; gap: 2px; }
+    .instagram-label strong { font-size: 12px; line-height: 1.1; }
+    .instagram-label span { font-size: 12px; font-weight: 700; line-height: 1.1; }
+
+    @media (max-width: 720px) {
+      main { padding: 33px 20px 56px; }
+      .topbar { padding: 0 20px; }
+      h1 { font-size: 54px; }
+      .intro { grid-template-columns: 1fr; gap: 14px; }
+      .intro-copy { max-width: 390px; }
+      .product-overview { grid-template-columns: 1fr; gap: 18px; padding: 19px 4px; }
+      .prints { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 11px; }
+      .print-label { padding: 8px; }
+      .address-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 420px) {
+      h1 { font-size: 44px; }
+      .address-grid { grid-template-columns: 1fr; }
+      .purchase-options { grid-template-columns: 1fr; }
+      .form-heading { align-items: start; flex-direction: column; }
+      .courier-options { grid-template-columns: 1fr; }
+      .submit-row { align-items: start; flex-direction: column; }
+      .whatsapp-contact { right: 12px; min-height: 54px; padding: 8px 12px; }
+      .instagram-contact { right: 12px; bottom: 82px; min-height: 54px; padding: 8px 12px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">LOOKSTLYO FASHION</div>
+    <div class="top-note">MADE TO BE YOURS</div>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">Streetwear drop / 001</p>
+        <h1 id="page-title">Built big.<br>Printed loud.</h1>
+      </div>
+      <p class="intro-copy">A heavyweight cotton drop-shoulder silhouette, finished with tie-print artwork front and back. Choose your design and build your order below.</p>
+    </section>
+
+    <section class="product-overview" aria-label="Shirt details and price">
+      <div class="price-box">
+        <span class="status-badge">READY FOR DELIVERY TODAY</span>
+        <p class="unit-price">₹529 <small>/ piece</small></p>
+        <p class="delivery-price">Courier ₹70 per order</p>
+        <p class="minimum-note">Minimum order: 1 piece</p>
+      </div>
+      <div class="product-specs">
+        <div class="product-spec"><span>FIT</span><strong>New streetwear · baggy oversized · drop shoulder</strong></div>
+        <div class="product-spec"><span>PRINT</span><strong>Tie print · front and back</strong></div>
+        <div class="product-spec"><span>FABRIC</span><strong>Heavy GSM cotton</strong></div>
+        <div class="product-spec"><span>COLLECTION</span><strong>Fully loaded</strong></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="prints-title">
+      <div class="section-heading">
+        <h2 id="prints-title">Choose your design</h2>
+        <span class="selection-count" id="selection-count" aria-live="polite">Choose 1 design</span>
+      </div>
+      <div class="prints" role="radiogroup" aria-labelledby="prints-title">
+        <label class="print-option">
+          <input type="radio" name="print" value="Print 01" required>
+          <span class="print-card"><img class="print-image" src="IMG201.jpeg" alt="Print design 01"><span class="print-label">Print 01 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
+        </label>
+        <label class="print-option">
+          <input type="radio" name="print" value="Print 02">
+          <span class="print-card"><img class="print-image" src="IMG202.jpeg" alt="Print design 02"><span class="print-label">Print 02 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
+        </label>
+        <label class="print-option">
+          <input type="radio" name="print" value="Print 03">
+          <span class="print-card"><img class="print-image" src="IMG203.jpeg" alt="Print design 03"><span class="print-label">Print 03 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
+        </label>
+        <label class="print-option">
+          <input type="radio" name="print" value="Print 04">
+          <span class="print-card"><img class="print-image" src="IMG204.jpeg" alt="Print design 04"><span class="print-label">Print 04 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
+        </label>
+        <label class="print-option">
+          <input type="radio" name="print" value="Print 05">
+          <span class="print-card"><img class="print-image" src="IMG205.jpeg" alt="Print design 05"><span class="print-label">Print 05 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
+        </label>
+        <label class="print-option">
+          <input type="radio" name="print" value="Print 06">
+          <span class="print-card"><img class="print-image" src="IMG206.jpeg" alt="Print design 06"><span class="print-label">Print 06 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
+        </label>
+        <label class="print-option">
+          <input type="radio" name="print" value="Print 07">
+          <span class="print-card"><img class="print-image" src="IMG207.jpeg" alt="Print design 07"><span class="print-label">Print 07 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
+        </label>
+        <label class="print-option">
+          <input type="radio" name="print" value="Print 08">
+          <span class="print-card"><img class="print-image" src="IMG208.jpeg" alt="Print design 08"><span class="print-label">Print 08 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
+        </label>
+        <label class="print-option">
+          <input type="radio" name="print" value="Print 09">
+          <span class="print-card"><img class="print-image" src="IMG209.jpeg" alt="Print design 09"><span class="print-label">Print 09 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
+        </label>
+        <label class="print-option">
+          <input type="radio" name="print" value="Print 10">
+          <span class="print-card"><img class="print-image" src="IMG210.jpeg" alt="Print design 10"><span class="print-label">Print 10 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
+        </label>
+      </div>
+    </section>
+
+    <form class="order-form" id="order-form">
+      <div class="form-heading">
+        <div>
+          <p class="eyebrow">Your delivery</p>
+          <h2>Build your order</h2>
+          <p>Choose your shirt size and quantity.</p>
+        </div>
+      </div>
+
+      <div class="purchase-options">
+        <fieldset class="size-options">
+          <legend>Shirt size · same size for all pieces</legend>
+          <div class="size-list">
+            <label class="size-option"><input type="radio" name="size" value="M" required><span class="size-card">M</span></label>
+            <label class="size-option"><input type="radio" name="size" value="L"><span class="size-card">L</span></label>
+            <label class="size-option"><input type="radio" name="size" value="XL"><span class="size-card">XL</span></label>
+          </div>
+        </fieldset>
+        <div class="quantity-field">
+          <label for="quantity">Quantity · minimum 1</label>
+          <input id="quantity" name="quantity" type="number" min="1" step="1" value="1" required>
+        </div>
+      </div>
+      <p class="order-estimate" id="order-estimate" aria-live="polite">Minimum order total: ₹599 (1 × ₹529 + ₹70 courier)</p>
+
+      <fieldset class="courier-options">
+        <legend>Select Courier</legend>
+        <label class="courier-option">
+          <input type="radio" name="courier" value="ST Courier" required>
+          <span class="courier-card">ST Courier</span>
+        </label>
+        <label class="courier-option">
+          <input type="radio" name="courier" value="Professional Courier">
+          <span class="courier-card">Professional Courier</span>
+        </label>
+      </fieldset>
+
+      <div class="address-title">Delivery address</div>
+      <div class="address-grid">
+        <div class="field"><label for="door">Door No.</label><input id="door" name="door" autocomplete="address-line1" placeholder="Door / building number" required></div>
+        <div class="field"><label for="street">Street</label><input id="street" name="street" autocomplete="address-line2" placeholder="Street name" required></div>
+        <div class="field"><label for="area">Area</label><input id="area" name="area" placeholder="Area name" required></div>
+        <div class="field"><label for="city">City / Town</label><input id="city" name="city" autocomplete="address-level2" placeholder="City / town name" required></div>
+        <div class="field"><label for="block">Block / Taluk</label><input id="block" name="block" placeholder="Block / taluk name" required></div>
+        <div class="field"><label for="pin">PIN Code</label><input id="pin" name="pin" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{6}" maxlength="6" placeholder="6-digit PIN code" title="Enter a 6-digit PIN code" required></div>
+        <div class="field"><label for="district">District</label><input id="district" name="district" placeholder="District" required></div>
+      </div>
+
+      <div class="submit-row">
+        <button class="submit-button" type="submit">Order on WhatsApp <span aria-hidden="true">&#8599;</span></button>
+        <span class="submit-note">Your order details will be sent to WhatsApp for confirmation.</span>
+      </div>
+    </form>
+  </main>
+
+  <a class="whatsapp-contact" href="https://wa.me/918680857511" target="_blank" rel="noopener noreferrer" aria-label="Chat with LOOKSTLYO FASHION on WhatsApp at 8680857511" title="WhatsApp 8680857511">
+    <svg class="whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M12.04 2a9.85 9.85 0 0 0-8.48 14.87l-1.1 4.02 4.12-1.08A9.85 9.85 0 1 0 12.04 2Zm0 17.86a7.97 7.97 0 0 1-4.06-1.1l-.29-.18-2.45.64.65-2.39-.19-.3a7.97 7.97 0 1 1 6.34 3.33Zm4.38-5.97c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.09 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.52.1.46-.07 1.43-.59 1.63-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/>
+    </svg>
+    <span class="whatsapp-label"><strong>WhatsApp</strong><span>8680857511</span></span>
+  </a>
+  <a class="instagram-contact" href="https://www.instagram.com/lookstylo_menswear?stkn=MWs4amhoazR5YTg5NQ==" target="_blank" rel="noopener noreferrer" aria-label="Visit LOOKSTLYO FASHION on Instagram at lookstylo_menswear" title="Instagram @lookstylo_menswear">
+    <svg class="instagram-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r=".75" fill="currentColor" stroke="none"/>
+    </svg>
+    <span class="instagram-label"><strong>Instagram</strong><span>@lookstylo_menswear</span></span>
+  </a>
+
+  <script>
+    const printInputs = document.querySelectorAll('input[name="print"]');
+    const orderForm = document.getElementById('order-form');
+    const selectionCount = document.getElementById('selection-count');
+    const quantityInput = document.getElementById('quantity');
+    const orderEstimate = document.getElementById('order-estimate');
+    const formatPrice = new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 });
+
+    const updateEstimate = () => {
+      const quantity = Number(quantityInput.value);
+      if (!Number.isInteger(quantity) || quantity < 1) {
+        orderEstimate.textContent = 'Minimum order is 1 piece.';
+        return;
+      }
+      const total = quantity * 529 + 70;
+      orderEstimate.textContent = `Estimated total: ${formatPrice.format(total)} (${quantity} × ₹529 + ₹70 courier)`;
+    };
+
+    quantityInput.addEventListener('input', updateEstimate);
+
+    printInputs.forEach((input) => {
+      input.addEventListener('change', () => {
+        orderForm.classList.add('is-visible');
+        selectionCount.textContent = '1 design selected';
+      });
+    });
+
+    orderForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!orderForm.reportValidity()) return;
+
+      const values = new FormData(orderForm);
+      const selectedPrint = document.querySelector('input[name="print"]:checked');
+      const quantity = Number(values.get('quantity'));
+      const subtotal = quantity * 529;
+      const total = subtotal + 70;
+      const message = [
+        'Hello LOOKSTLYO FASHION,',
+        '',
+        'I would like to place an order for the following shirt:',
+        '',
+        'ORDER DETAILS',
+        'Product: Baggy oversized drop-shoulder shirt',
+        `Design: ${selectedPrint.value}`,
+        'Print: Tie print, front and back',
+        'Fabric: Heavy GSM cotton',
+        `Size: ${values.get('size')} (all pieces)`,
+        `Quantity: ${quantity} ${quantity === 1 ? 'piece' : 'pieces'}`,
+        `Courier: ${values.get('courier')}`,
+        'Availability: Ready for delivery today',
+        '',
+        'PRICE SUMMARY',
+        `Shirt subtotal: ${formatPrice.format(subtotal)} (${quantity} × ₹529)`,
+        'Courier charge: ₹70',
+        `Order total: ${formatPrice.format(total)}`,
+        '',
+        'DELIVERY ADDRESS',
+        `Door / Building: ${values.get('door')}`,
+        `Street: ${values.get('street')}`,
+        `Area: ${values.get('area')}`,
+        `City / Town: ${values.get('city')}`,
+        `Block / Taluk: ${values.get('block')}`,
+        `District: ${values.get('district')}`,
+        `PIN Code: ${values.get('pin')}`,
+        '',
+        'Please confirm this order and the delivery details.',
+        'Thank you.'
+      ].join('\n');
+
+      const whatsappUrl = `https://wa.me/918680857511?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    });
+  </script>
+</body>
+</html>
