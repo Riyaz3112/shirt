@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f2e9">
-  <title>Oversized Tie-Print Shirt | LOOKSTLYO FASHION</title>
+  <title>Vintage Boxy Baggy Oversized Drop-Shoulder Shirt | LOOKSTLYO FASHION</title>
   <style>
     :root {
       color-scheme: light;
@@ -125,6 +125,17 @@
       align-items: baseline;
       justify-content: space-between;
       margin: 0 0 17px;
+    }
+
+    .reel-showcase {
+      margin: 18px 0 26px;
+      padding: 18px 0 0;
+      border-top: 2px solid var(--ink);
+    }
+
+    .reel-frame {
+      max-width: 560px;
+      margin: 0 auto;
     }
 
     h2 {
@@ -319,6 +330,139 @@
     .field input::placeholder { color: #929d95; }
     .field input:focus { border-color: var(--green); box-shadow: 0 0 0 3px #255d4b1c; }
 
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 4px 0 28px;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.55);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .trust-item::before {
+      content: "✓";
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--green);
+      color: var(--ink);
+      font-weight: 900;
+    }
+
+    .quick-order-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 18px 0 0;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .quick-order-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .quick-order-meta strong {
+      color: var(--ink);
+    }
+
+    .quick-order-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border: 0;
+      border-radius: 3px;
+      background: var(--orange-dark);
+      color: var(--white);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .quick-order-button:hover { background: var(--orange); }
+    .quick-order-button:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+
+    .shop-location {
+      margin-top: 34px;
+      padding-top: 26px;
+      border-top: 2px solid var(--ink);
+    }
+
+    .location-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 20px 22px;
+      border: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .location-label {
+      margin: 0 0 7px;
+      color: var(--orange-dark);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .location-card h3 {
+      margin: 0 0 8px;
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+
+    .location-card p {
+      margin: 5px 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .map-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border: 0;
+      border-radius: 3px;
+      background: var(--ink);
+      color: var(--green);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .map-button:hover { background: var(--orange-dark); color: var(--white); }
     .submit-row {
       display: flex;
       align-items: center;
@@ -401,6 +545,86 @@
     .instagram-label strong { font-size: 12px; line-height: 1.1; }
     .instagram-label span { font-size: 12px; font-weight: 700; line-height: 1.1; }
 
+    .reel-contact {
+      position: fixed;
+      right: 22px;
+      bottom: 168px;
+      z-index: 5;
+      display: inline-flex;
+      min-width: 230px;
+      min-height: 58px;
+      align-items: center;
+      gap: 12px;
+      padding: 9px 16px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: var(--white);
+      box-shadow: 0 4px 14px #191b191a;
+      color: var(--ink);
+      text-decoration: none;
+      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+    }
+
+    .reel-contact:hover { transform: translateY(-2px); border-color: #f05d5d; box-shadow: 0 7px 18px #191b1926; }
+    .reel-contact:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+    .reel-icon { width: 36px; height: 36px; flex: 0 0 36px; padding: 6px; border-radius: 50%; background: linear-gradient(145deg, #ff5a5f, #f7a43b); color: white; }
+    .reel-label { display: grid; gap: 2px; }
+    .reel-label strong { font-size: 12px; line-height: 1.1; }
+    .reel-label span { font-size: 11px; font-weight: 800; line-height: 1.1; }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 40;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(25, 27, 25, 0.75);
+    }
+
+    .lightbox.is-open {
+      display: flex;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: min(86vw, 760px);
+      max-height: 90vh;
+      padding: 12px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 50px rgba(25, 27, 25, 0.24);
+    }
+
+    .lightbox-content img {
+      display: block;
+      width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+      background: var(--paper);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 34px;
+      height: 34px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(25, 27, 25, 0.9);
+      color: var(--white);
+      font-size: 24px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .lightbox-close:focus-visible {
+      outline: 3px solid var(--orange);
+      outline-offset: 2px;
+    }
+
     @media (max-width: 720px) {
       main { padding: 33px 20px 56px; }
       .topbar { padding: 0 20px; }
@@ -438,82 +662,102 @@
   <main>
     <section class="intro" aria-labelledby="page-title">
       <div>
-        <p class="eyebrow">Streetwear drop / 001</p>
-        <h1 id="page-title">Built big.<br>Printed loud.</h1>
+        <p class="eyebrow">🔥 NEW STREETWEAR DROP 🔥</p>
+        <h1 id="page-title">Vintage Boxy<br>Baggy Oversized</h1>
       </div>
-      <p class="intro-copy">A heavyweight cotton drop-shoulder silhouette, finished with tie-print artwork front and back. Choose your design and build your order below.</p>
+      <p class="intro-copy">Front &amp; back print • Heavy GSM cotton fabric • 8 trending designs • Sizes: M | L | XL</p>
     </section>
 
     <section class="product-overview" aria-label="Shirt details and price">
       <div class="price-box">
         <span class="status-badge">READY FOR DELIVERY TODAY</span>
-        <p class="unit-price">₹529 <small>/ piece</small></p>
+        <p class="unit-price">₹449 <small>/ piece</small></p>
         <p class="delivery-price">Courier ₹70 per order</p>
         <p class="minimum-note">Minimum order: 1 piece</p>
       </div>
       <div class="product-specs">
-        <div class="product-spec"><span>FIT</span><strong>New streetwear · baggy oversized · drop shoulder</strong></div>
-        <div class="product-spec"><span>PRINT</span><strong>Tie print · front and back</strong></div>
-        <div class="product-spec"><span>FABRIC</span><strong>Heavy GSM cotton</strong></div>
-        <div class="product-spec"><span>COLLECTION</span><strong>Fully loaded</strong></div>
+        <div class="product-spec"><span>FIT</span><strong>Vintage boxy baggy oversized drop-shoulder</strong></div>
+        <div class="product-spec"><span>PRINT</span><strong>Front &amp; back print</strong></div>
+        <div class="product-spec"><span>FABRIC</span><strong>Heavy GSM cotton fabric</strong></div>
+        <div class="product-spec"><span>LOOK</span><strong>Fully loaded streetwear look</strong></div>
       </div>
     </section>
 
+    <section class="reel-showcase" aria-label="Instagram reel showcase">
+      <div class="section-heading">
+        <h2>Instagram reel</h2>
+      </div>
+      <div class="reel-frame">
+        <blockquote class="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/reel/DeCawzfJEEY/?utm_source=ig_embed&utm_campaign=loading"
+          data-instgrm-version="12"
+          style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:100%;">
+          <a href="https://www.instagram.com/reel/DeCawzfJEEY/?utm_source=ig_embed&utm_campaign=loading" target="_blank" rel="noopener noreferrer">View this post on Instagram</a>
+        </blockquote>
+      </div>
+    </section>
+
+    <div class="trust-strip" aria-label="Customer trust points">
+      <div class="trust-item">100% Cotton Feel</div>
+      <div class="trust-item">Fast Delivery</div>
+      <div class="trust-item">Easy WhatsApp Order</div>
+    </div>
+
     <section aria-labelledby="prints-title">
       <div class="section-heading">
-        <h2 id="prints-title">Choose your design</h2>
+        <h2 id="prints-title">9 Trending Designs</h2>
         <span class="selection-count" id="selection-count" aria-live="polite">Choose 1 design</span>
       </div>
       <div class="prints" role="radiogroup" aria-labelledby="prints-title">
         <label class="print-option">
-          <input type="radio" name="print" value="Print 01" required>
-          <span class="print-card"><img class="print-image" src="IMG201.jpeg" alt="Print design 01"><span class="print-label">Print 01 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
+          <input type="radio" name="print" value="Design 01" required checked>
+          <span class="print-card"><img class="print-image" src="IMG301.jpeg" alt="Design 01"><span class="print-label">Design 01 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
         </label>
         <label class="print-option">
-          <input type="radio" name="print" value="Print 02">
-          <span class="print-card"><img class="print-image" src="IMG202.jpeg" alt="Print design 02"><span class="print-label">Print 02 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
+          <input type="radio" name="print" value="Design 02">
+          <span class="print-card"><img class="print-image" src="IMG302.jpeg" alt="Design 02"><span class="print-label">Design 02 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
         </label>
         <label class="print-option">
-          <input type="radio" name="print" value="Print 03">
-          <span class="print-card"><img class="print-image" src="IMG203.jpeg" alt="Print design 03"><span class="print-label">Print 03 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
+          <input type="radio" name="print" value="Design 03">
+          <span class="print-card"><img class="print-image" src="IMG303.jpeg" alt="Design 03"><span class="print-label">Design 03 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
         </label>
         <label class="print-option">
-          <input type="radio" name="print" value="Print 04">
-          <span class="print-card"><img class="print-image" src="IMG204.jpeg" alt="Print design 04"><span class="print-label">Print 04 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
+          <input type="radio" name="print" value="Design 04">
+          <span class="print-card"><img class="print-image" src="IMG304.jpeg" alt="Design 04"><span class="print-label">Design 04 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
         </label>
         <label class="print-option">
-          <input type="radio" name="print" value="Print 05">
-          <span class="print-card"><img class="print-image" src="IMG205.jpeg" alt="Print design 05"><span class="print-label">Print 05 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
+          <input type="radio" name="print" value="Design 05">
+          <span class="print-card"><img class="print-image" src="IMG305.jpeg" alt="Design 05"><span class="print-label">Design 05 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
         </label>
         <label class="print-option">
-          <input type="radio" name="print" value="Print 06">
-          <span class="print-card"><img class="print-image" src="IMG206.jpeg" alt="Print design 06"><span class="print-label">Print 06 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
+          <input type="radio" name="print" value="Design 06">
+          <span class="print-card"><img class="print-image" src="IMG306.jpeg" alt="Design 06"><span class="print-label">Design 06 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
         </label>
         <label class="print-option">
-          <input type="radio" name="print" value="Print 07">
-          <span class="print-card"><img class="print-image" src="IMG207.jpeg" alt="Print design 07"><span class="print-label">Print 07 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
+          <input type="radio" name="print" value="Design 07">
+          <span class="print-card"><img class="print-image" src="IMG307.jpeg" alt="Design 07"><span class="print-label">Design 07 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
         </label>
         <label class="print-option">
-          <input type="radio" name="print" value="Print 08">
-          <span class="print-card"><img class="print-image" src="IMG208.jpeg" alt="Print design 08"><span class="print-label">Print 08 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
+          <input type="radio" name="print" value="Design 08">
+          <span class="print-card"><img class="print-image" src="IMG308.jpeg" alt="Design 08"><span class="print-label">Design 08 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
         </label>
         <label class="print-option">
-          <input type="radio" name="print" value="Print 09">
-          <span class="print-card"><img class="print-image" src="IMG209.jpeg" alt="Print design 09"><span class="print-label">Print 09 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
+          <input type="radio" name="print" value="Design 09">
+          <span class="print-card"><img class="print-image" src="IMG309.jpeg" alt="Design 09"><span class="print-label">Design 09 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
         </label>
-        <label class="print-option">
-          <input type="radio" name="print" value="Print 10">
-          <span class="print-card"><img class="print-image" src="IMG210.jpeg" alt="Print design 10"><span class="print-label">Print 10 <span class="checkmark" aria-hidden="true">&#10003;</span></span></span>
-        </label>
+      </div>
+      <div class="quick-order-bar" aria-live="polite">
+        <div class="quick-order-meta"><strong>Selected:</strong> <span id="selected-design-label">Design 01</span></div>
+        <button class="quick-order-button" id="quick-order-button" type="button">Quick Order</button>
       </div>
     </section>
 
-    <form class="order-form" id="order-form">
+    <form class="order-form is-visible" id="order-form">
       <div class="form-heading">
         <div>
-          <p class="eyebrow">Your delivery</p>
-          <h2>Build your order</h2>
-          <p>Choose your shirt size and quantity.</p>
+          <p class="eyebrow">Trusted ordering</p>
+          <h2>Order in 30 seconds</h2>
+          <p>Select your design, size, and quantity. We confirm by WhatsApp.</p>
         </div>
       </div>
 
@@ -531,13 +775,13 @@
           <input id="quantity" name="quantity" type="number" min="1" step="1" value="1" required>
         </div>
       </div>
-      <p class="order-estimate" id="order-estimate" aria-live="polite">Minimum order total: ₹599 (1 × ₹529 + ₹70 courier)</p>
+      <p class="order-estimate" id="order-estimate" aria-live="polite">Minimum order total: ₹519 (1 × ₹449 + ₹70 courier)</p>
 
       <fieldset class="courier-options">
         <legend>Select Courier</legend>
         <label class="courier-option">
           <input type="radio" name="courier" value="ST Courier" required>
-          <span class="courier-card">ST Courier</span>
+          <span class="courier-card">ST Courier Official Courier Partner</span>
         </label>
         <label class="courier-option">
           <input type="radio" name="courier" value="Professional Courier">
@@ -561,13 +805,42 @@
         <span class="submit-note">Your order details will be sent to WhatsApp for confirmation.</span>
       </div>
     </form>
+
+    <section class="shop-location" aria-labelledby="shop-location-title">
+      <div class="section-heading">
+        <h2 id="shop-location-title">Shop address &amp; location</h2>
+      </div>
+      <div class="location-card">
+        <div class="location-info">
+          <p class="location-label">Visit our shop</p>
+          <h3>LOOKSTLYO FASHION</h3>
+          <p>Address: No. 18, Sacred Heart College Shopping Complex, Vaniyambadi Main Road, Opposite Poorvika, Tirupathur, Tamil Nadu 635601</p>
+          <p>City / State: Tirupathur, Tamil Nadu</p>
+        </div>
+        <a class="map-button" href="https://maps.google.com/maps?vet=10CAAQoqAOahcKEwiQ-IGOvqKXAxUAAAAAHQAAAAAQGg..i&udm&fvr=1&pvq=Cg0vZy8xMXo4d2xtNWZiIhcKEWxvb2tzdHlsbyBmYXNoaW9uEAIYAw&lqi=ChFsb29rc3R5bG8gZmFzaGlvbkiqq6a5o76AgAhaIxAAEAEYABgBIhFsb29rc3R5bG8gZmFzaGlvbioGCAIQABABkgEOY2xvdGhpbmdfc3RvcmU&cs=0&um=1&ie=UTF-8&fb=1&gl=in&sa=X&ftid=0x3bac553e3681385d:0x27c0cd28444767be" target="_blank" rel="noopener noreferrer">Open in Maps</a>
+      </div>
+    </section>
   </main>
+
+  <div class="lightbox" id="image-lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="lightbox-content">
+      <button class="lightbox-close" type="button" aria-label="Close image">&times;</button>
+      <img id="lightbox-image" src="" alt="Selected design preview">
+    </div>
+  </div>
 
   <a class="whatsapp-contact" href="https://wa.me/918680857511" target="_blank" rel="noopener noreferrer" aria-label="Chat with LOOKSTLYO FASHION on WhatsApp at 8680857511" title="WhatsApp 8680857511">
     <svg class="whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
       <path fill="currentColor" d="M12.04 2a9.85 9.85 0 0 0-8.48 14.87l-1.1 4.02 4.12-1.08A9.85 9.85 0 1 0 12.04 2Zm0 17.86a7.97 7.97 0 0 1-4.06-1.1l-.29-.18-2.45.64.65-2.39-.19-.3a7.97 7.97 0 1 1 6.34 3.33Zm4.38-5.97c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.09 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.52.1.46-.07 1.43-.59 1.63-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/>
     </svg>
     <span class="whatsapp-label"><strong>WhatsApp</strong><span>8680857511</span></span>
+  </a>
+  <a class="reel-contact" href="https://www.instagram.com/reel/DeCawzfJEEY/?stkn=d3dvaXVjaHU1NXBl" target="_blank" rel="noopener noreferrer" aria-label="Watch the LOOKSTLYO FASHION Instagram reel" title="Instagram Reel">
+    <svg class="reel-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M17 3.5a1 1 0 0 1 .7.3l1.8 1.8a1 1 0 0 1 .28.7V8a1 1 0 0 1-1 1h-1.8a1 1 0 0 1-.7-.3L15.2 7.2A1 1 0 0 1 15 6.5V4.5a1 1 0 0 1 1-1Zm-7 2.8a2.7 2.7 0 0 1 2.7 2.7v3.6a2.7 2.7 0 0 1-5.4 0V9a2.7 2.7 0 0 1 2.7-2.7Zm6.8 4.7h1.1v4.9h-1.1a2.8 2.8 0 0 1-2.8-2.8v-.3a2.8 2.8 0 0 1 2.8-2.8Zm-6.8 4.1a1.7 1.7 0 0 0 1.7-1.7v-1.9a1.7 1.7 0 0 0-3.4 0v1.9a1.7 1.7 0 0 0 1.7 1.7Z"/>
+      <path d="M12.4 5.7c.3 0 .6.2.7.5l.5 1.8c.1.3.4.5.7.5h1.2v9.6h-1.2a1.2 1.2 0 0 1-1.2-1.2v-1.3c0-.4-.2-.8-.6-1l-1.5-.8a1.4 1.4 0 0 1-.6-1.2v-3.9a1.4 1.4 0 0 1 .6-1.2l1.5-.8c.4-.2.6-.6.6-1V6.2c0-.3.2-.5.5-.5Z"/>
+    </svg>
+    <span class="reel-label"><strong>Instagram Reel</strong><span>Watch now</span></span>
   </a>
   <a class="instagram-contact" href="https://www.instagram.com/lookstylo_menswear?stkn=MWs4amhoazR5YTg5NQ==" target="_blank" rel="noopener noreferrer" aria-label="Visit LOOKSTLYO FASHION on Instagram at lookstylo_menswear" title="Instagram @lookstylo_menswear">
     <svg class="instagram-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
@@ -578,13 +851,32 @@
     <span class="instagram-label"><strong>Instagram</strong><span>@lookstylo_menswear</span></span>
   </a>
 
+  <script async src="//www.instagram.com/embed.js"></script>
   <script>
     const printInputs = document.querySelectorAll('input[name="print"]');
     const orderForm = document.getElementById('order-form');
     const selectionCount = document.getElementById('selection-count');
+    const selectedDesignLabel = document.getElementById('selected-design-label');
+    const quickOrderButton = document.getElementById('quick-order-button');
     const quantityInput = document.getElementById('quantity');
     const orderEstimate = document.getElementById('order-estimate');
+    const lightbox = document.getElementById('image-lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    const designImages = document.querySelectorAll('.print-image');
     const formatPrice = new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 });
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+    };
+
+    const updateSelectedDesign = () => {
+      const selected = document.querySelector('input[name="print"]:checked');
+      if (selected) {
+        selectedDesignLabel.textContent = selected.value;
+      }
+    };
 
     const updateEstimate = () => {
       const quantity = Number(quantityInput.value);
@@ -592,18 +884,44 @@
         orderEstimate.textContent = 'Minimum order is 1 piece.';
         return;
       }
-      const total = quantity * 529 + 70;
-      orderEstimate.textContent = `Estimated total: ${formatPrice.format(total)} (${quantity} × ₹529 + ₹70 courier)`;
+      const total = quantity * 449 + 70;
+      orderEstimate.textContent = `Estimated total: ${formatPrice.format(total)} (${quantity} × ₹449 + ₹70 courier)`;
     };
 
     quantityInput.addEventListener('input', updateEstimate);
+
+    designImages.forEach((image) => {
+      image.addEventListener('click', () => {
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt;
+        lightbox.classList.add('is-open');
+        lightbox.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+    });
+
+    quickOrderButton.addEventListener('click', () => {
+      orderForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const sizeInput = document.querySelector('input[name="size"]');
+      if (sizeInput) sizeInput.focus();
+    });
 
     printInputs.forEach((input) => {
       input.addEventListener('change', () => {
         orderForm.classList.add('is-visible');
         selectionCount.textContent = '1 design selected';
+        updateSelectedDesign();
       });
     });
+
+    updateSelectedDesign();
 
     orderForm.addEventListener('submit', (event) => {
       event.preventDefault();
@@ -612,7 +930,7 @@
       const values = new FormData(orderForm);
       const selectedPrint = document.querySelector('input[name="print"]:checked');
       const quantity = Number(values.get('quantity'));
-      const subtotal = quantity * 529;
+      const subtotal = quantity * 449;
       const total = subtotal + 70;
       const message = [
         'Hello LOOKSTLYO FASHION,',
@@ -620,17 +938,17 @@
         'I would like to place an order for the following shirt:',
         '',
         'ORDER DETAILS',
-        'Product: Baggy oversized drop-shoulder shirt',
+        'Product: Vintage Boxy Baggy Oversized Drop-Shoulder Shirt',
         `Design: ${selectedPrint.value}`,
-        'Print: Tie print, front and back',
-        'Fabric: Heavy GSM cotton',
+        'Print: Front & back print',
+        'Fabric: Heavy GSM cotton fabric',
         `Size: ${values.get('size')} (all pieces)`,
         `Quantity: ${quantity} ${quantity === 1 ? 'piece' : 'pieces'}`,
         `Courier: ${values.get('courier')}`,
         'Availability: Ready for delivery today',
         '',
         'PRICE SUMMARY',
-        `Shirt subtotal: ${formatPrice.format(subtotal)} (${quantity} × ₹529)`,
+        `Shirt subtotal: ${formatPrice.format(subtotal)} (${quantity} × ₹449)`,
         'Courier charge: ₹70',
         `Order total: ${formatPrice.format(total)}`,
         '',
